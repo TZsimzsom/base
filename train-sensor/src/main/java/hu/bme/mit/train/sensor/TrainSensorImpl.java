@@ -4,16 +4,22 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 
+import com.google.common.collect.Table;
+import java.util.Date;
+import com.google.common.collect.HashBasedTable;
+import java.lang.Integer;
+
+
 public class TrainSensorImpl implements TrainSensor {
 
 	private TrainController controller;
 	private TrainUser user;
 	private int speedLimit = 5;
-	private Table<Date, Integer, Double> tachograf  = HashBasedTable.create();
+	private Table<Date, Integer, Integer> tachograf  = HashBasedTable.create();
 
 
 	public void addToTapograf(){
-		tachograf.put(new Date(), user.getJoystickPosition(), controller.getReferenceSpeed())
+		tachograf.put(new Date(), user.getJoystickPosition(), controller.getReferenceSpeed());
 	}
 
 	public int getTapografSize(){
