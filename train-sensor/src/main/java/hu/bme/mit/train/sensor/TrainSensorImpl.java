@@ -9,10 +9,21 @@ public class TrainSensorImpl implements TrainSensor {
 	private TrainController controller;
 	private TrainUser user;
 	private int speedLimit = 5;
+	private Table<Date, Integer, Double> tachograf  = HashBasedTable.create();
+
+
+	public void addToTapograf(){
+		tachograf.put(new Date(), user.getJoystickPosition(), controller.getReferenceSpeed())
+	}
+
+	public int getTapografSize(){
+		return tachograf.size();
+	}
 
 	public TrainSensorImpl(TrainController controller, TrainUser user) {
 		this.controller = controller;
 		this.user = user;
+
 	}
 
 	@Override

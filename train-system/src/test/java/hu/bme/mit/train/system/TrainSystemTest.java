@@ -58,5 +58,13 @@ public class TrainSystemTest {
 		controller.followSpeed();
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
+
+	@Test
+	public void Tachograph() {
+		sensor.addToTapograf();
+
+		Assert.assertEquals(1, sensor.getTapografSize());
+	}
+
 	
 }
