@@ -72,4 +72,4 @@ The figure below illustrates this behavior using an example.
 
 **This is bold text**
 
-~~This was mistaken text~~
+~~Branch-A
