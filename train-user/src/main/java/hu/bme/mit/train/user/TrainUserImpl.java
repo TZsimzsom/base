@@ -29,6 +29,8 @@ public class TrainUserImpl implements TrainUser {
 		timer.schedule(task, 0, 10);
 	}
 
+	
+
 	public TrainUserImpl(TrainController controller) {
 		this.controller = controller;
 	}
