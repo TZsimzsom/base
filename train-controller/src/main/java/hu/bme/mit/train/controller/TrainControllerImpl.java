@@ -16,6 +16,8 @@ public class TrainControllerImpl implements TrainController {
 		Timer timer = new Timer();
         timer.schedule(new TimerTask() {
 
+
+			//This calls the followSpeed in every 0,1 seconds
             @Override
             public void run() {
                 followSpeed();
