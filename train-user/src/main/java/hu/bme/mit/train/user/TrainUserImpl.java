@@ -14,6 +14,8 @@ public class TrainUserImpl implements TrainUser {
 	private Timer timer;
 	private Random random = new Random();
 
+	private boolean alarmState;
+
 	TrainUserImpl() {
 		//This constructor runs a TimerTask where it sets the joystick to a random position, adn then the controller follows the speed
 		TimerTask task = new TimerTask() {
