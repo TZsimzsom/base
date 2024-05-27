@@ -2,6 +2,10 @@ package hu.bme.mit.train.user;
 
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainUser;
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class TrainUserImpl implements TrainUser {
 
@@ -19,7 +23,7 @@ public class TrainUserImpl implements TrainUser {
 				overrideJoystickPosition(speed);
 				controller.followSpeed();
 			}
-		}
+		};
 		timer.schedule(task, 0, 10);
 	}
 
